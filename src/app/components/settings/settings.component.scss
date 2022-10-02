@@ -1,0 +1,307 @@
+@import "../../../dist/scss/variables.scss";
+
+.settings-component {
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  justify-content: center;
+
+  // LIGHT MODE
+  .modal {
+    background-color: $background-pink;
+    width: 90vw;
+    height: fit-content;
+    max-width: 44.8rem;
+    padding: 2.7rem 2.4rem;
+    border-radius: 2.4rem;
+    color: $dark-pink;
+    margin-block: 3rem;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2.7rem;
+
+      p {
+        font-family: 'Roboto Flex';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+        letter-spacing: 0.015rem;
+      }
+
+      button {
+        width: 2rem;
+        height: 2rem;
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .settings {
+      display: flex;
+      flex-direction: column;
+
+      .reset-app {
+        color: white;
+        width: 100%;
+        height: 5rem;
+        background-color: $dark-pink;
+        border-radius: 0.7rem;
+        font-weight: 700;
+      }
+
+      .number-setting {
+        span {
+          display: flex;
+        }
+
+        input {
+          width: 6.6rem;
+          padding: 1rem;
+          border: 1px solid rgba(0, 0, 0, 0.15);
+          border-radius: 0.8rem 0 0 0.8rem;
+          background-color: rgba(0, 0, 0, 0);
+        }
+      }
+
+      .setting {
+        padding-block: 2.25rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+          font-family: 'Roboto Flex';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.8rem;
+          line-height: 1.9rem;
+        }
+
+        .buttons-number {
+          display: flex;
+          flex-direction: column;
+          border: 1px solid rgba(0, 0, 0, 0.15);
+          border-radius: 0 0.8rem 0.8rem 0;
+
+          button {
+            padding: 0 0.6rem;
+          }
+        }
+
+
+        /* The switch - the box around the slider */
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 5rem;
+          height: 2.7rem;
+        }
+
+        /* Hide default HTML checkbox */
+        .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        /* The slider */
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 2rem;
+          width: 2rem;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+
+        input:checked+.slider {
+          background-color: $dark-pink;
+        }
+
+        input:checked+.slider:before {
+          -webkit-transform: translateX(22px);
+          -ms-transform: translateX(22px);
+          transform: translateX(22px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+          border-radius: 34px;
+        }
+
+        .slider.round:before {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+
+  &.short-break {
+    .modal {
+      background-color: $background-green;
+
+      .settings {
+        .reset-app {
+          background-color: $dark-green;
+        }
+
+        .setting {
+          input:checked+.slider {
+            background-color: $dark-green;
+          }
+        }
+
+        .setting {
+          .buttons-number {
+            button {
+              svg {
+                path {
+                  fill: $dark-green;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.long-break {
+    .modal {
+      background-color: $background-blue;
+
+      .settings {
+        .reset-app {
+          background-color: $dark-blue;
+        }
+
+        .setting {
+          input:checked+.slider {
+            background-color: $dark-blue;
+          }
+        }
+
+        .setting {
+          .buttons-number {
+            button {
+              svg {
+                path {
+                  fill: $dark-blue;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // DARK MODE
+  &.dark-mode {
+    .modal {
+      background-color: $background-pink-dark;
+      color: white;
+
+      .header {
+        button {
+          svg {
+            path {
+              fill: white;
+            }
+          }
+        }
+      }
+
+      .settings {
+        div {
+          input:checked+.slider {
+            background-color: $pink;
+          }
+        }
+
+        .number-setting {
+          input {
+            border: 1px solid white;
+            color: white;
+          }
+        }
+
+        .setting {
+          .buttons-number {
+            border: 1px solid white;
+
+            button {
+              padding: 0 0.6rem;
+
+              svg {
+                path {
+                  fill: white;
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  &.dark-mode.short-break {
+    .modal {
+      background-color: $background-green-dark;
+
+      .settings {
+        div {
+          input:checked+.slider {
+            background-color: $green;
+          }
+        }
+      }
+    }
+  }
+
+  &.dark-mode.long-break {
+    .modal {
+      background-color: $background-blue-dark;
+
+      .settings {
+        div {
+          input:checked+.slider {
+            background-color: $blue;
+          }
+        }
+      }
+    }
+  }
+}

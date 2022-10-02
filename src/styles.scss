@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./dist/scss/variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,700&display=swap');
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  -webkit-transition: background-color 500ms ease-out;
+  -moz-transition: background-color 500ms ease-out;
+  -o-transition: background-color 500ms ease-out;
+  transition: background-color 500ms ease-out;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

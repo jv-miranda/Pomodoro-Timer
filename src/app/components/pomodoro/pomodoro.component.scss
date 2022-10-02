@@ -1,0 +1,182 @@
+@import "../../../dist/scss/variables.scss";
+
+.pomodoro-component {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $background-pink;
+
+  .state-icon {
+    width: 13.6rem;
+    height: 4.8rem;
+
+    &#short-break-icon {
+      width: 195px;
+      height: 48px;
+    }
+
+    &#long-break-icon {
+      width: 190px;
+      height: 48px;
+    }
+  }
+
+  .timer {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      color: $dark-pink;
+      font-family: 'Roboto Flex';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 25.6rem;
+      line-height: 85%;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 1.6rem;
+
+    button {
+      width: 12.8rem;
+      height: 9.6rem;
+
+      &.smaller-buttons {
+        width: 8rem;
+        height: 8rem;
+      }
+    }
+  }
+
+  &.counting {
+    .timer {
+      span {
+        font-weight: 800;
+      }
+    }
+  }
+
+  &.short-break {
+    background-color: $background-green;
+
+    .timer {
+      span {
+        color: $dark-green;
+      }
+    }
+
+    .buttons {
+      button {
+        path {
+          fill: $dark-green;
+        }
+
+        svg {
+          rect {
+            fill: $green;
+          }
+        }
+
+        &.smaller-buttons {
+          svg {
+            rect {
+              fill: $light-green;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  &.long-break {
+    background-color: $background-blue;
+
+    // .state-icon {
+
+    // }
+
+    .timer {
+      span {
+        color: $dark-blue;
+      }
+    }
+
+    .buttons {
+      button {
+        path {
+          fill: $dark-blue;
+        }
+
+        svg {
+          rect {
+            fill: $blue;
+          }
+        }
+
+        &.smaller-buttons {
+          svg {
+            rect {
+              fill: $light-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.dark-mode {
+    background-color: $background-pink-dark;
+
+    .buttons {
+      button {
+        path {
+          fill: #FFFFFF;
+        }
+      }
+    }
+
+    .state-icon {
+      path {
+        fill: #FFFFFF;
+      }
+
+      .border {
+        stroke: #FFFFFF;
+      }
+    }
+
+    .timer {
+      span {
+        color: white;
+      }
+    }
+
+    &.short-break {
+      background-color: $background-green-dark;
+    }
+
+    &.long-break {
+      background-color: $background-blue-dark;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .pomodoro-component {
+    .timer {
+      span {
+        font-size: 20rem;
+      }
+    }
+  }
+}
