@@ -2,14 +2,14 @@
 
 This project consists in a responsive Pomodoro Timer with the listed functionalities below:
 
--Start and pause the counting
--Skip to the next moment (Focus, Short-Break and Long-Break)
--Notificate the user when the the counter has started
--Settings modal
--Dark mode
--Change Focus, Short-break and Long-break length
--Change quantity of Pomodoros until Long-break
--Reset App and Settings
+- Start and pause the counting
+- Skip to the next moment (Focus, Short-Break and Long-Break)
+- Notificate the user when the the counter has started
+- Settings modal
+- Dark mode
+- Change Focus, Short-break and Long-break length
+- Change quantity of Pomodoros until Long-break
+- Reset App and Settings
 
 ## Screenshot
 
