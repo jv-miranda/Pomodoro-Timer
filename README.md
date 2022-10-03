@@ -1,27 +1,31 @@
 # PomodoroTimer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
+This project consists in a responsive Pomodoro Timer with the listed functionalities below:
 
-## Development server
+-Start and pause the counting
+-Skip to the next moment (Focus, Short-Break and Long-Break)
+-Notificate the user when the the counter has started
+-Settings modal
+-Dark mode
+-Change Focus, Short-break and Long-break length
+-Change quantity of Pomodoros until Long-break
+-Reset App and Settings
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Screenshot
 
-## Code scaffolding
+![](./src/assets/design/Pomodoro-Timer%20Cover.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## This project was developed with
 
-## Build
+- Angular 14.1.3
+- SCSS
+- TypeScript
+- HTML
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Author
 
-## Running unit tests
+- [@jv-miranda](https://github.com/jv-miranda)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Links
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jo%C3%A3o-vitor-miranda-8b445222b)
