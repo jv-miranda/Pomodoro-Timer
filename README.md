@@ -10,6 +10,7 @@ This project consists in a responsive Pomodoro Timer with the listed functionali
 - Change Focus, Short-break and Long-break length
 - Change quantity of Pomodoros until Long-break
 - Reset App and Settings
+- Save the application's state on LocalStorage
 
 ## Screenshot
 
